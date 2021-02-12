@@ -1,10 +1,10 @@
 public class Puan {
 
   float x = 6;                                    //buton x koordinati
-  float y = 1;
+  float y = 0;
   float forHundred = 0; //100 için ekstra
-  float xSize = 211;
-  float ySize = 119;
+  float xSize = 212;
+  float ySize = 120;
   //213,33 yatay size, 120 dikey size
   int puan;
   int i ;
@@ -30,14 +30,14 @@ public class Puan {
     beginShape();
     texture(img);
     vertex(x + (i * 212), y + (j * 120), 0, 0);
-    vertex(x + xSize + (i * 212), y + (j * 120), 206, 0);
-    vertex(x + xSize + (i * 212), y + ySize + (j * 120), 206, 112);
-    vertex(x + (i * 212), y + ySize + (j * 120), 0, 112);
+    vertex(x + xSize + (i * 212), y + (j * 120), 221, 0);
+    vertex(x + xSize + (i * 212), y + ySize + (j * 120), 221, 125);
+    vertex(x + (i * 212), y + ySize + (j * 120), 0, 125);
     endShape();
     //rect(x + (i * 212), y + (j * 120), xSize, ySize);
     textSize(60);
     fill(#D3D3D3);
-
+    textFont(font);
     text(puan, x + xSize/3 + (i * 212) - forHundred, y + ySize/2 + (j * 120) + 20, 1);
   }
 }

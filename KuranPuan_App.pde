@@ -1,6 +1,7 @@
 //import processing.video.*; 
 //Movie movie;
 PImage img;
+PFont font;
 PShape rect;
 Puan[] p;
 boolean flag = false;
@@ -14,7 +15,8 @@ void setup() {
   
    //movie = new Movie(this, "zoom.mp4");
   //movie.loop();
-  
+  println(PFont.list()[0]);
+  font = createFont("Arboria-Bold.ttf", 60);
   background(0, 255, 0);
   fullScreen(P3D);
   smooth();
@@ -22,7 +24,7 @@ void setup() {
   noCursor();
   loadScore();
   Collections.shuffle(Arrays.asList(p));
-  img = loadImage("deneme.jpg");
+  img = loadImage("puanlar_grid_sergen.jpg");
 }
 //void movieEvent(Movie movie) {  
 //  movie.read();
